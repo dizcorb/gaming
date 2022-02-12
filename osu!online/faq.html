@@ -1,82 +1,100 @@
 <!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>常见问题</title>
-        <link rel="stylesheet" href="style/picnic.min.css">
-        <link rel="stylesheet" type="text/css" href="style/main.css">
-        <!-- <link href="//fonts.googleapis.com/css?family=Exo+2:400,600italic" rel="stylesheet" type="text/css"> -->
-        <link rel="stylesheet" type="text/css" href="style/font.css">
-        <link rel="icon" href="favicon.png">
-    </head>
-
-    <body>
-        <nav id="main-nav">
-            <div class="nav-link">
-                <a href="index.html" class="brand">Osaka Salmon University!</a>
-                <a href="new.html" class="pseudo button">最新</a>
-                <a href="hot.html" class="pseudo button">热门</a>
-                <a href="genre.html" class="pseudo button">分类</a>
-            </div>
-            <div class="nav-search">
-                <form action="search.html">
-                    <input type="text" name="q" placeholder="谱面关键词或sid"/>
-                    <input type="image" class="search-button" src="research.svg">
-                </form>
-            </div>
-            <div class="nav-tool">
-                <a href="local.html" class="pseudo button">收藏夹</a>
-                <a href="faq.html" class="pseudo button active">常见问题</a>
-                <a href="settings.html" class="pseudo button">设置</a>
-                <a onclick="document.documentElement.requestFullscreen();" class="pseudo button">进入全屏</a>
-            </div>
-        </nav>
-
-        <div class="main-page" id="main-page">
-            <div class="main-content">
-                <div class="faqentry">
-                    <h2>这游戏怎么玩？</h2>
-                    按键默认是鼠标左右键和Z、X键，可以在设置中修改。
-                    游戏屏幕上出现的圆片称为打击圈。当打击圈外侧的圆圈缩小并刚好落到打击圈上时，点击打击圈。
-                    有些打击圈带有一条滑条，你需要按住打击圈不放，并跟随其移动。
-                    当屏幕上出现一个大圆盘时，按住按键绕圆心快速转动。
-                </div>
-                <div class="faqentry">
-                    <h2>光标移动好像有点延迟？</h2>
-                    试着在设置中启用硬件光标，这可以降低光标反馈的延迟。不过在有些操作系统或浏览器中可能出现闪烁或无法显示光标等问题，因此默认是关闭的。此外，目前硬件光标的光标大小调整只有固定3档，在0.65以下显示为最小，在0.95以上显示为最大。
-                </div>
-                <div class="faqentry">
-        			<h2>游戏玩起来非常卡，怎么办？</h2>
-        			可能是浏览器自身占用了大量运算资源导致卡顿，也可能是由于某种奇特的机制使浏览器降低了事件发送频率。建议避免CPU占用过高，关闭类似360的杀毒软件/电脑管家，试着关闭浏览器的其它标签页并重启浏览器。请确保使用的是主流的现代浏览器（如Firefox，Chrome）。如果还是卡，请<a href="https://github.com/111116/osu">提issue</a>。
-                </div>
-                <div class="faqentry">
-                    <h2>为什么网页上什么都没显示？</h2>
-                    可能是提供谱面的镜像站出错了。您可以发现镜像站<a href="https://osu.sayobot.cn/home/new">Sayobot</a>主页上也没有任何内容。如果是这样，您可以联系镜像站的站长恢复。
-                    <!--此外，您可以将谱面加入收藏夹，游玩已收藏谱面不受镜像站出错影响。-->
-                </div>
-                <div class="faqentry">
-                    <h2>我电脑上的下载器(IDM)弹出好多弹窗！</h2>
-                    本站使用XHR加载音画资源。请设置下载器(IDM)为在本站禁用。
-                </div>
-                <div class="faqentry">
-                    <h2>能不能从本地上传谱面？</h2>
-                    此功能还在开发中。您可以搜索谱库中已有的谱面。
-                    <!-- 可以。您可以在“已收藏”谱面列表里找到添加本地谱面的入口。您添加的本地谱面只有您自己能够看到。 -->
-                </div>
-                <div class="faqentry">
-                    <h2>音画不同步？</h2>
-                    请<a href="https://github.com/111116/osu">提issue</a>。
-                </div>
-
-                <div class="faqentry">
-                    <h2>其他问题？</h2>
-                    请<a href="https://github.com/111116/osu">提issue</a>。
-                </div>
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>FAQ </title>
+    <link rel=”canonical” href=”https://webosu.online/”/>
+    <meta name="description" content="The unofficial web port of the rhythm game osu!">
+    <link rel="stylesheet" href="assets/css/picnic.min.css">
+    <link rel="stylesheet"href="assets/css/main.css">
+    <link rel="stylesheet"href="assets/css/font.css">
+    <link rel="icon" href="assets/img/favicon.png">
+    <script defer data-domain="webosu.online" src="https://plausible.io/js/plausible.js"></script>
+    <script async src="https://arc.io/widget.min.js#iG7WX6p8"></script>
+</head>
+<!--Top nav bar-->
+<nav id="main-nav">
+    <div class="nav-link">
+        <a href="index.html" class="brand">webosu!</a>
+        <a href="new.html" class="pseudo button">New</a>
+        <a href="hot.html" class="pseudo button">Popular</a>
+        <a href="browse.html" class="pseudo button">Browse</a>
+    </div>
+    <div class="nav-search">
+        <form action="search.html">
+            <input type="text" name="q" placeholder="Beatmap or SID" />
+            <input type="image" alt="Search" class="search-button" src="assets/img/search.svg">
+        </form>
+    </div>
+    <div class="nav-tool">
+        <a href="faq.html" class="pseudo button active">FAQ</a>
+        <a href="local.html" class="pseudo button">Favorites</a>
+        <a href="settings.html" class="pseudo button">Settings</a>
+        <a onclick="document.documentElement.requestFullscreen();" class="pseudo button">Fullscreen</a>
+    </div>
+</nav>
+<div class="main-page" id="main-page">
+    <div class="main-content">
+        <div class="announcement">
+            Notice: If beatmaps are not loading please use a VPN such as <a href="https://protonvpn.com/pricing">ProtonVPN</a>
         </div>
-    </body>
+        <br>
+        <div class="faqentry">
+            <h2>Is there a Discord server?</h2>
+            Yes there is, and you can join <a href="https://discord.gg/v7wBtSdYzx">it</a> right <a
+                href="https://discord.gg/v7wBtSdYzx">here!</a> You are free to send bug reports or just interact with
+            other members!
+        </div>
+        <div class="faqentry">
+            <h2>How do I play?</h2>
+            The default buttons are the left and right mouse buttons and the Z and X keys, which can be changed in the
+            <a href="settings">settings</a>.
+            The circles that appear on the game screen are called strike circles. When the circle outside the circle
+            shrinks and just falls on the circle, click the circle.
+            Some circles are long sliders, you need to hold down click on the circle and follow it to comple the slider.
+            When a large blue circle appears on the screen, click and hold the then quickly spin around the center of
+            the circle.
+        </div>
+        <div class="faqentry">
+            <h2>The cursor movement seems to be a bit delayed?</h2>
+            Try to enable the "Enable system cursor" option in the settings, which can reduce the delay of cursor
+            feedback. However, some operating systems or browsers may have problems such as flickering or inability to
+            display the cursor, so it's turned off by default. In addition, the current cursor size adjustment of the
+            hardware cursor is only fixed to 3 levels, the smallest value is displayed below 0.65, and the largest value
+            is displayed above 0.95.
+        </div>
+        <div class="faqentry">
+            <h2>The game is freezing/very choppy what do I do?</h2>
+            You can uncheck "Use system resolution" in the settings and set the resolution to a value lower than 100%.
+            It is recommended to avoid high CPU usage, close other tabs of the browser or close other applications.
+            Please make sure you are using a mainstream modern browser (such as Firefox, Chrome).
+        </div>
+        <div class="faqentry">
+            <h2>Why is the site blank?</h2>
+            It may be that the API that provides the beatmaps is broken/offline. You can check if that's the case by
+            looking here: <a href="https://osu.sayobot.cnindex.html/new">Sayobot</a>, if so wait and come back later.
+            To prevent this add beatmaps to your favorites and they will not be affected by API errors.
+        </div>
+        <div class="faqentry">
+            <h2>Can I upload a beatmap from a local osz file?</h2>
+            Not yet.
+        </div>
+    </div>
+</div>
+</body>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyBJyrBf03GhNZbupO6uU-wtDTfAC_zY8_0",
+    authDomain: "webosu.firebaseapp.com",
+    projectId: "webosu",
+    storageBucket: "webosu.appspot.com",
+    messagingSenderId: "138250997417",
+    appId: "1:138250997417:web:be7407c18de702880763b8",
+    measurementId: "G-55J58MR5ZW"
+  };
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </html>
-
-<!-- attribution -->
-<!-- play icon made by https://www.flaticon.com/authors/those-icons -->
-<!-- search icon made by https://www.flaticon.com/authors/good-ware -->

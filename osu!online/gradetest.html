@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-	<title>123</title>
-    <link rel="stylesheet" href="style/picnic.min.css">
-    <link rel="stylesheet" type="text/css" href="style/main.css">
-    <link rel="stylesheet" type="text/css" href="style/font.css">
+	<title>Gradetest</title>
+	<meta name="description" content="The unofficial web port of the rhythm game osu! with a huge pool of beatmaps and a clean, lazer-like UI this is one of the best osu! web ports">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="assets/img/favicon.png">
+	<link rel="manifest" href="manifest.json">
+	<link rel="stylesheet" href="assets/css/picnic.min.css">
+	<link rel="stylesheet"href="assets/css/main.css">
+	<link rel="stylesheet"href="assets/css/font.css">
+	<script defer data-domain="webosu.online" src="https://plausible.io/js/plausible.js"></script>
+	<script async src="https://arc.io/widget.min.js#iG7WX6p8"></script>
 </head>
-<body style="background-image: url('skin/defaultbg.jpg');">
-	
+<body style="background-image: url('assets/img/defaultbg.jpg');">
 	<div class="grading">
 		<div class="top">
 			<div class="beatmap-info">
-				<div class="title">Fuwa Fuwa Time</div>
-				<div class="artist">HO-KAGO TEA TIME</div>
-				<div class="version">Insane</div><!--
-				--><div class="mapper">mapped by Monstrata</div>
+				<div class="title">Black Rover</div>
+				<div class="artist">Vickeblanka</div>
+				<div class="version">Black</div>
+				<div class="mapper">mapped by Sotarks</div>
 			</div>
 			<div class="ranking">Ranking</div>
-			<div class="grade a">A</div>
+			<div class="grade S">S</div>
 		</div>
 		<div class="left">
 			<div class="block score">957242</div>
@@ -40,4 +44,19 @@
 		</div>
 	</div>
 </body>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyBJyrBf03GhNZbupO6uU-wtDTfAC_zY8_0",
+    authDomain: "webosu.firebaseapp.com",
+    projectId: "webosu",
+    storageBucket: "webosu.appspot.com",
+    messagingSenderId: "138250997417",
+    appId: "1:138250997417:web:be7407c18de702880763b8",
+    measurementId: "G-55J58MR5ZW"
+  };
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </html>
